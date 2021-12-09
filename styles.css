@@ -3,9 +3,19 @@
 :root {
   --theme-color: #3e84da;
   --link-color: #daa33e;
+  --layout: 1fr 1fr 1fr;
 }
 
+nav {
+  --link-color: #000;
+}
 /* --- Main styles --- */
+
+@media screen and (max-width: 760px) {
+  :root {
+    --layout: 1fr;
+  }
+}
 
 h1,
 h2,
@@ -76,7 +86,7 @@ footer {
 
 footer .blurbs {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: var(--layout);
   max-width: 760px;
   margin: 0 auto;
   grid-gap: 40px;
